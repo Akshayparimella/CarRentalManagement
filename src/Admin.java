@@ -10,7 +10,7 @@ public class Admin {
 	{
 		Scanner sc=new Scanner(System.in);
 		String uname,password;
-		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Car", "root", "vamshi1@NK");
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Car", "root", "1234");
 		System.out.println("*************WELCOME TO ShiftGears Admin Login****************");
 		System.out.println("Enter User Name");
 		uname=sc.next();
@@ -31,7 +31,7 @@ public class Admin {
 	}
 	static void view_cars() throws SQLException
 	{
-		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Car", "root", "vamshi1@NK");
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Car", "root", "1234");
 		String sql="select *from addcars";
 		Statement st = con.createStatement();
 		ResultSet rs = st.executeQuery(sql);
@@ -46,7 +46,7 @@ public class Admin {
 	
 static void  Booking_list() throws SQLException
 {
-	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Car", "root", "vamshi1@NK");
+	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Car", "root", "1234");
 	String sql="select *from booking_list";
 	Statement st = con.createStatement();
 	ResultSet rs = st.executeQuery(sql);
