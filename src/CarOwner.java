@@ -56,7 +56,7 @@ public class CarOwner {
 		mobile=sc.next();
 		System.out.println("Enter emailID");
 		email=sc.next();
-		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Car", "root", "vamshi1@NK");
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Car", "root", "1234");
 		String sql="insert into carowner (name,username,password,mobile,email) values(?,?,?,?,?)";
 		PreparedStatement ps=con.prepareStatement(sql);
 		ps.setString(1, name);
@@ -80,7 +80,7 @@ public class CarOwner {
 	{
 		Scanner sc=new Scanner(System.in);
 		String username,password;
-		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Car", "root", "vamshi1@NK");
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Car", "root", "1234");
 		System.out.println("Enter User Name");
 		username=sc.next();
 		System.out.println("Enter Password");
@@ -105,7 +105,7 @@ public class CarOwner {
 	}
 	void addcars() throws ParseException, SQLException
 	{
-		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Car", "root", "vamshi1@NK");
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Car", "root", "1234");
 		System.out.println(coid); 
 		String Brand,Model,year,color,RegistrationNumber,fuel_type,transmission_type,city;
 		Scanner sc=new Scanner(System.in);
@@ -175,7 +175,7 @@ public class CarOwner {
 	void view_car() throws SQLException
 	{
 		Scanner sc=new Scanner(System.in);
-		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Car", "root", "vamshi1@NK");
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Car", "root", "1234");
 		String sql="select *from addcars where coid='"+coid+"'";
 		Statement st = con.createStatement();
 		ResultSet rs = st.executeQuery(sql);
@@ -189,7 +189,7 @@ public class CarOwner {
 	}
 	void Booking_Car_List() throws SQLException
 	{
-		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Car", "root", "vamshi1@NK");
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Car", "root", "1234");
 		String sql="select *from booking_list where coid='"+coid+"'";
 		Statement st = con.createStatement();
 		ResultSet rs = st.executeQuery(sql);
