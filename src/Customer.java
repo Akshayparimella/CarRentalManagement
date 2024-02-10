@@ -30,7 +30,7 @@ public class Customer
 		email=sc.next();
 		System.out.println("Enter Driving Licince Number");
 		Dl=sc.next();
-		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Car", "root", "vamshi1@NK");
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Car", "root", "1234");
 		String insertSql = "INSERT INTO customer (fname, lname, uname, password, mobile, email, Dl) VALUES (?, ?, ?, ?, ?, ?, ?)";
 		PreparedStatement ps = con.prepareStatement(insertSql);
 		ps.setString(1, fname);
@@ -54,7 +54,7 @@ public class Customer
 	void customerLogin() throws SQLException, ParseException 
 	{
 		Scanner sc=new Scanner(System.in);
-		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Car", "root", "vamshi1@NK");
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Car", "root", "1234");
 		String cusername,cpassword;
 		System.out.println("Enter User Name");
 		cusername=sc.next();
@@ -96,7 +96,7 @@ public class Customer
 		System.out.print("Enter todate (yyyy-MM-dd): ");
 		String todateStr = sc.next();
 		java.util.Date todate = dateFormat.parse(todateStr);
-		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Car", "root", "vamshi1@NK");
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Car", "root", "1234");
 		String sql="select *from addcars where status = '"+flag+"'and city='"+city+"'and (fromdateStr <= '"+fromdateStr+"' AND todateStr >= '"+todateStr+"');";
 		Statement st = con.createStatement();
 		ResultSet rs = st.executeQuery(sql);
@@ -174,7 +174,7 @@ public class Customer
 	void View_booking() throws SQLException, ParseException
 	{
 		Scanner sc=new Scanner(System.in);
-		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Car", "root", "vamshi1@NK");
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Car", "root", "1234");
 		String sql="select *from booking_list where customer_id='"+cid+"'";
 		Statement st = con.createStatement();
 		ResultSet rs = st.executeQuery(sql);
